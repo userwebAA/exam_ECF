@@ -21,6 +21,21 @@
     <!-- Divider -->
     <hr class="sidebar-divider">
 
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+            aria-expanded="true" aria-controls="collapseTwo">
+            <i class="fa fa-users" aria-hidden="true"></i>
+            <span>Utilisateurs</span>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="{{ route('users.index') }}">Liste</a>
+                <a class="collapse-item" href="{{ route('users.create') }}">Nouveau</a>
+            </div>
+        </div>
+    </li>
+
+
     {{-- <!-- Heading -->
     <div class="sidebar-heading">
         Interface

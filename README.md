@@ -2,6 +2,8 @@
 
 Merci d'avoir cloné ce projet Laravel ! Suivez les étapes ci-dessous pour configurer l'environnement et lancer l'application.
 
+<br>
+
 ## Prérequis
 
 Avant de commencer, assurez-vous d'avoir les outils suivants installés sur votre machine :
@@ -9,6 +11,8 @@ Avant de commencer, assurez-vous d'avoir les outils suivants installés sur votr
 - [PHP](https://www.php.net/downloads.php) (version 8.1 ou supérieure)
 - [Composer](https://getcomposer.org/download/)
 - [MySQL](https://dev.mysql.com/downloads/installer/) ou une autre base de données compatible
+
+<br>
 
 ## Étapes à suivre
 
@@ -77,7 +81,7 @@ php artisan serve
 
 Vous pouvez accéder au projet en suivant le lien ci-après : [localhost:8000](http://localhost:8000)
 
-<br><br>
+<br>
 
 ## Problèmes courants
 
