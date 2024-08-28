@@ -21,9 +21,6 @@
                 <p><span class="text-primary me-2">#</span>Nos Animaux</p>
                 <h1 class="display-5 mb-0">Découvrez Nos Animaux Formidables de <span class="text-primary">Zoo</span></h1>
             </div>
-            <div class="col-lg-6 text-lg-end">
-                <a class="btn btn-primary py-3 px-5" href="">Explorer plus d'animaux</a>
-            </div>
         </div>
         <div class="row g-4">
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
