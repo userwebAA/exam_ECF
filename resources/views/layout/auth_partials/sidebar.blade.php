@@ -35,6 +35,34 @@
         </div>
     </li>
 
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#habitat"
+            aria-expanded="true" aria-controls="habitat">
+            <i class="fa fa-home" aria-hidden="true"></i>
+            <span>Habitat</span>
+        </a>
+        <div id="habitat" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="{{ route('habitats.index') }}">Liste</a>
+                <a class="collapse-item" href="{{ route('habitats.create') }}">Nouveau</a>
+            </div>
+        </div>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#services"
+            aria-expanded="true" aria-controls="services">
+            <i class="fa fa-align-justify" aria-hidden="true"></i>
+            <span>Services</span>
+        </a>
+        <div id="services" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="{{ route('services.index') }}">Liste</a>
+                <a class="collapse-item" href="{{ route('services.create') }}">Nouveau</a>
+            </div>
+        </div>
+    </li>
+
 
     {{-- <!-- Heading -->
     <div class="sidebar-heading">
