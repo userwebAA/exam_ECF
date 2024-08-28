@@ -8,13 +8,13 @@
             <div class="col-lg-12  wow fadeIn" data-wow-delay="0.5s">
                 <div class="owl-carousel h-90 header-carousel">
                     <div class="owl-carousel-item">
-                        <img class="img-fluid" src="{{ asset('assets/guest/img/carousel-1.jpg') }}" style="height: 75vh">
+                        <img class="img-fluid" src="{{ asset('assets/guest/img/chameleon-green-hd-close-wallpaper.jpg') }}" style="height: 75vh">
                     </div>
                     <div class="owl-carousel-item">
-                        <img class="img-fluid" src="{{ asset('assets/guest/img/carousel-2.jpg') }}" style="height: 75vh">
+                        <img class="img-fluid" src="{{ asset('assets/guest/img/325868.jpg') }}" style="height: 75vh">
                     </div>
                     <div class="owl-carousel-item">
-                        <img class="img-fluid" src="{{ asset('assets/guest/img/carousel-3.jpg') }}" style="height: 75vh">
+                        <img class="img-fluid" src="{{ asset('assets/guest/img/Jungle-Giraffe-Wallpaper-43337.jpg') }}" style="height: 75vh">
                     </div>
                 </div>
             </div>
