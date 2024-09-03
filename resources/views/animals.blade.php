@@ -4,12 +4,12 @@
 
     <div class="container-fluid header-bg py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
-            <h1 class="display-4 text-white mb-3 animated slideInDown">Our Animals</h1>
+            <h1 class="display-4 text-white mb-3 animated slideInDown">Nos animaux</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb mb-0">
                     <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
                     <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-primary active" aria-current="page">Our Animals</li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page">Nos animaux</li>
                 </ol>
             </nav>
         </div>
@@ -31,7 +31,7 @@
                                 <img class="img-fluid" src="{{ asset('assets/guest/img/animal-md-1.jpg') }}" alt="">
                                 <div class="animal-text p-4">
                                     <p class="text-white small text-uppercase mb-0">Animal</p>
-                                    <h5 class="text-white mb-0">Elephant</h5>
+                                    <h5 class="text-white mb-0">Eland</h5>
                                 </div>
                             </div>
                         </a>
@@ -42,7 +42,7 @@
                                 <img class="img-fluid" src="{{ asset('assets/guest/img/animal-lg-1.jpg') }}" alt="">
                                 <div class="animal-text p-4">
                                     <p class="text-white small text-uppercase mb-0">Animal</p>
-                                    <h5 class="text-white mb-0">Elephant</h5>
+                                    <h5 class="text-white mb-0">Lémur catta</h5>
                                 </div>
                             </div>
                         </a>
@@ -57,7 +57,7 @@
                                 <img class="img-fluid" src="{{ asset('assets/guest/img/animal-lg-2.jpg') }}" alt="">
                                 <div class="animal-text p-4">
                                     <p class="text-white small text-uppercase mb-0">Animal</p>
-                                    <h5 class="text-white mb-0">Elephant</h5>
+                                    <h5 class="text-white mb-0">Chat</h5>
                                 </div>
                             </div>
                         </a>
@@ -68,7 +68,7 @@
                                 <img class="img-fluid" src="{{ asset('assets/guest/img/animal-md-2.jpg') }}" alt="">
                                 <div class="animal-text p-4">
                                     <p class="text-white small text-uppercase mb-0">Animal</p>
-                                    <h5 class="text-white mb-0">Elephant</h5>
+                                    <h5 class="text-white mb-0">Zebre</h5>
                                 </div>
                             </div>
                         </a>
@@ -83,7 +83,7 @@
                                 <img class="img-fluid" src="{{ asset('assets/guest/img/animal-md-3.jpg') }}" alt="">
                                 <div class="animal-text p-4">
                                     <p class="text-white small text-uppercase mb-0">Animal</p>
-                                    <h5 class="text-white mb-0">Elephant</h5>
+                                    <h5 class="text-white mb-0">Eléphant</h5>
                                 </div>
                             </div>
                         </a>
@@ -91,10 +91,10 @@
                     <div class="col-12">
                         <a class="animal-item" href="{{ asset('assets/guest/img/animal-lg-3.jpg') }}" data-lightbox="animal">
                             <div class="position-relative">
-                                <img class="img-fluid" src="{{ asset('assets/guest/img/animal-lg-3.jpg') }}" alt="">
+                            <img class="img-fluid" src="{{ asset('assets/guest/img/animal-lg-3.jpg') }}" alt="">
                                 <div class="animal-text p-4">
                                     <p class="text-white small text-uppercase mb-0">Animal</p>
-                                    <h5 class="text-white mb-0">Elephant</h5>
+                                    <h5 class="text-white mb-0">Giraffe</h5>
                                 </div>
                             </div>
                         </a>

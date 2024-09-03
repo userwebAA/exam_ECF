@@ -516,6 +516,23 @@
     color: var(--dark);
 }
 
+.habitat-1{
+    list-style: none ;
+}
+
+.habitat-1 a{
+    text-decoration: none;
+}
+
+.habitat-1 li{
+   font-size: 18px;
+   padding-bottom: 2%;
+}
+
+
+.animal-1 li{
+    font-size: 16px;
+}
 
 /*** Footer ***/
 .footer {

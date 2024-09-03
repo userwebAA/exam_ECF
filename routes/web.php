@@ -26,6 +26,13 @@ Route::get('/habitat' , function(){
     return view ('habitat');
 })->name('habitat') ;
 
+Route::get('/habitat1' , function(){
+    return view ('habitat1');
+})->name('habitat1') ;
+
+Route::get('/animal1' , function(){
+    return view ('animal1');
+})->name('animal1') ;
 
 
 Route::get('/dashboard', function () {
@@ -47,7 +54,7 @@ Route::middleware('auth')->group(function () {
     Route::get('habitats/{habitat}/edit', [HabitatController::class, 'edit'])->name('habitats.edit');
     Route::get('habitats/{habitat}', [HabitatController::class, 'destroy'])->name('habitats.delete');
 
-    Route::get('services', [ServiceController::class, 'index'])->name('services.index');
+    Route::get('services/index', [ServiceController::class, 'index'])->name('services.index');
     Route::get('services/create', [ServiceController::class, 'create'])->name('services.create');
     Route::post('services/store', [ServiceController::class, 'store'])->name('services.store');
     Route::post('services/{habitat}', [ServiceController::class, 'update'])->name('services.update');

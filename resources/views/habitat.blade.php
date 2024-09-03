@@ -36,7 +36,7 @@
             <div class="row gy-5 gx-4">
                 <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                     <h2 class="mb-3 tewx d-flex justify-content-center">Savane africaine reconstituée</h2>
-                    <img src="{{ asset('assets/guest/img/1200-521080824-three-giraffe.jpg') }}" class="w-100" alt="">
+                    <a href="{{ route('habitat1') }}"><img src="{{ asset('assets/guest/img/1200-521080824-three-giraffe.jpg') }}" class="w-100" alt=""></a>
                     <p>La Savane Africaine du zoo est un vaste espace herbeux avec des acacias et des points d'eau, conçu pour reproduire l'habitat naturel des girafes. Elles y évoluent librement, offrant aux visiteurs 
                         une immersion dans un environnement rappelant la savane africaine </p>
                 </div>
