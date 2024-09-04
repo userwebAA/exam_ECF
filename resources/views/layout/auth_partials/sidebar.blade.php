@@ -63,6 +63,20 @@
         </div>
     </li>
 
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#heures"
+            aria-expanded="true" aria-controls="heures">
+            <i class="fa fa-align-justify" aria-hidden="true"></i>
+            <span>Heures</span>
+        </a>
+        <div id="heures" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="{{ route('heures.index') }}">Liste</a>
+                <a class="collapse-item" href="{{ route('heures.create') }}">Nouveau</a>
+            </div>
+        </div>
+    </li>
+
 
     {{-- <!-- Heading -->
     <div class="sidebar-heading">

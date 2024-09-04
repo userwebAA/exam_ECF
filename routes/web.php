@@ -3,6 +3,7 @@
 use App\Http\Controllers\HabitatController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\HeureController;
 use App\Http\Controllers\UtilisateurController;
 use Illuminate\Support\Facades\Route;
 
@@ -60,6 +61,13 @@ Route::middleware('auth')->group(function () {
     Route::post('services/{habitat}', [ServiceController::class, 'update'])->name('services.update');
     Route::get('services/{habitat}/edit', [ServiceController::class, 'edit'])->name('services.edit');
     Route::get('services/{habitat}', [ServiceController::class, 'destroy'])->name('services.delete');
+
+    Route::get('heures/index', [HeureController::class, 'index'])->name('heures.index');
+    Route::get('heures/create', [HeureController::class, 'create'])->name('heures.create');
+    Route::post('heures/store', [HeureController::class, 'store'])->name('heures.store');
+    Route::post('heures/{habitat}', [HeureController::class, 'update'])->name('heures.update');
+    Route::get('heures/{habitat}/edit', [HeureController::class, 'edit'])->name('heures.edit');
+    Route::get('heures/{habitat}', [HeureController::class, 'destroy'])->name('heures.delete');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
