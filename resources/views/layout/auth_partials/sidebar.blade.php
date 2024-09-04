@@ -76,6 +76,12 @@
         </div>
     </li>
 
+    <li class="nav-item active">
+        <a class="nav-link" href="{{ route('heures.index') }}">
+            <i class="fa fa-times"></i>
+            <span>Heures</span>
+        </a>
+    </li>
 
     {{-- <!-- Heading -->
     <div class="sidebar-heading">
