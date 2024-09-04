@@ -12,6 +12,16 @@ class HabitatController extends Controller {
         return view('habitats.index', compact('habitats'));
     }
 
+    public function guest_index() {
+        $habitats = Habitat::all();
+        return view('habitats.guest_index', compact('habitats'));
+    }
+
+    public function guest_index_show(Habitat $habitat) {
+        // $habitat->load('animals');
+        return view('habitats.guest_show', compact('habitat'));
+    }
+
     public function create() {
         return view('habitats.create');
     }
@@ -20,7 +30,7 @@ class HabitatController extends Controller {
         $request->validate([
             'nom' => ['required','string','max:255'],
             'image' => ['nullable','image', 'max:2048'],
-            'description' => ['required','string','max:255'],
+            'description' => ['required','string'],
         ]);
 
         $habitat = Habitat::create([
@@ -44,7 +54,7 @@ class HabitatController extends Controller {
         $request->validate([
             'nom' => ['required','string','max:255'],
             'image' => ['nullable','image', 'max:2048'],
-            'description' => ['required','string','max:255'],
+            'description' => ['required','string'],
         ]);
 
         $habitat->update([

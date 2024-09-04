@@ -1,39 +1,28 @@
 <?php
 
+use App\Http\Controllers\AnimalController;
+use App\Http\Controllers\DefaultController;
 use App\Http\Controllers\HabitatController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\UtilisateurController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function(){
-    return view('index');
-})->name('index');
+Route::get('/', [DefaultController::class, 'home'])->name('index');
 
 Route::get('/services', function(){
     return view('services');
 })->name('services');
 
-Route::get('/animals', function(){
-    return view('animals');
-})->name('animals');
+Route::get('/animals_lits', [AnimalController::class, 'guest_index'])->name('guest_animals');
+Route::get('/animals/show/{animal}', [AnimalController::class, 'guest_show'])->name('guest_animals_show');
 
 Route::get('/contact', function(){
     return view('contact');
 })->name('contact');
 
-Route::get('/habitat' , function(){
-    return view ('habitat');
-})->name('habitat') ;
-
-Route::get('/habitat1' , function(){
-    return view ('habitat1');
-})->name('habitat1') ;
-
-Route::get('/animal1' , function(){
-    return view ('animal1');
-})->name('animal1') ;
-
+Route::get('/habitat', [HabitatController::class, 'guest_index'])->name('habitat');
+Route::get('/habitat/show/{habitat}', [HabitatController::class, 'guest_index_show'])->name('habitat1');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -60,6 +49,8 @@ Route::middleware('auth')->group(function () {
     Route::post('services/{habitat}', [ServiceController::class, 'update'])->name('services.update');
     Route::get('services/{habitat}/edit', [ServiceController::class, 'edit'])->name('services.edit');
     Route::get('services/{habitat}', [ServiceController::class, 'destroy'])->name('services.delete');
+
+    Route::resource('animals', AnimalController::class);
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

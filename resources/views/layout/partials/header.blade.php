@@ -12,7 +12,7 @@
             <a href="{{ route('index') }}" class="nav-item nav-link active">Accueil</a>
             <a href="{{ route('habitat') }}" class="nav-item nav-link">Habitat</a>
             <a href="{{ route('services') }}" class="nav-item nav-link">Services</a>
-            <a href="{{ route('animals') }}" class="nav-item nav-link">Nos animaux</a>
+            <a href="{{ route('guest_animals') }}" class="nav-item nav-link">Nos animaux</a>
             <a href="{{ route('contact') }}" class="nav-item nav-link">Contact</a>
         </div>
 

@@ -35,23 +35,24 @@
             </div>
             <div class="row gy-5 gx-4">
                 <div class="col-lg-6 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <img src="{{ asset('assets/guest/img/11959053-19391180.jpg') }}" id="#" class="w-100" alt="">
-                </div>        
-                    
-                    <div class="col-lg-6 col-md-4 col-sm-6 wow fadeInUp " data-wow-delay="0.1s">
-                        <h3 class="text-center">Foret naturel</h3>
-                        <p class="text-center">Les rhinocéros blancs vivent dans des enclos qui imitent leur habitat naturel, comme les savanes et les forêts. Ces espaces sont aménagés pour 
-                            permettre aux animaux de se déplacer librement et de maintenir un comportement naturel.</p>
-                            <h5 class="pb-3">Ici vivent :</h5>
-                            <ul class="habitat-1">
-                                <a href="{{ route('animal1') }}"><li>Nos rhinoceros</li></a>
-                                <a href="{{ route('animal1') }}"><li>Nos girafes</li></a>
-                                <a href="{{ route('animal1') }}"><li>Nos zebres</li></a>
-                                <a href="{{ route('animal1') }}"><li>Nos éléphants</li></a>
-                            </ul>
-                            <p>Nous sommes fiers d'accueillir des éléphants, rhinocéros, girafes, et zèbres dans notre zoo, où nous recréons pour eux des conditions 
-                                qui imitent leur habitat naturel.Leur bien-être et leur confort sont au cœur de notre engagement quotidien.</p>
-                
+                    <img src="{{ asset($habitat->image ?? "default_habitat.jpg") }}" id="#" class="w-100" alt="">
+                </div>
+                <div class="col-lg-6 col-md-4 col-sm-6 wow fadeInUp " data-wow-delay="0.1s">
+                    <h3> {{ $habitat->nom }} </h3>
+                    <p> {{ $habitat->description }} </p>
+                        <h5 class="pb-3">Ici vivent :</h5>
+
+                        <ul class="habitat-1">
+                            @forelse ($habitat->animals as $animal)
+                                <a href="{{ route('guest_animals_show', $animal->id) }}">
+                                    <li> {{ $animal->nom }} </li>
+                                </a>
+                            @empty
+                                <p> Aucun animal ne vit ici pour le moment. </p>
+                            @endforelse
+                        </ul>
+                </div>
+            </div>
         </div>
     </div>
 

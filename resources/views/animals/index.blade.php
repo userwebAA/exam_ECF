@@ -4,8 +4,8 @@
 
     <div class="card">
         <div class="card-header d-flex align-items-center justify-content-between">
-            <h5 class="card-title mt-2">Liste des habitats</h5>
-            <a href="{{ route('habitats.create') }}" class="btn btn-primary btn-sm float-right p-2">
+            <h5 class="card-title mt-2">Liste des animaux</h5>
+            <a href="{{ route('animals.create') }}" class="btn btn-primary btn-sm float-right p-2">
                 <i class="fa fa-plus mx-2"></i>
                 Nouveau
             </a>
@@ -18,21 +18,25 @@
                         <tr>
                             <th class="text-center"></th>
                             <th class="text-center">Nom</th>
+                            <th class="text-center">Habitat</th>
                             <th class="text-center">Description</th>
                             <th class="text-center">Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($habitats as $habitat)
+                        @foreach ($animals as $animal)
                             <tr>
                                 <td class="text-center col-1">
-                                    <img src="{{ asset($habitat->image ) }}" alt="" class="w-100 rounded">
+                                    <img src="{{ asset($animal->image ) }}" alt="" class="w-100 rounded">
                                 </td>
-                                <td class="text-center"> {{ $habitat->nom }} </td>
-                                <td> {{ $habitat->description }} </td>
-                                <td class="py-4 d-flex justify-content-around align-items-center">
-                                    <a href="{{ route('habitats.edit', $habitat->id) }}"><i class="fa fa-edit text-primary"></i></a>
-                                    <a href="{{ route('habitats.delete', $habitat->id) }}"> <i class="fa fa-trash text-danger"></i> </a>
+                                <td class="text-center"> {{ $animal->nom }} </td>
+                                <td class="text-center"> {{ $animal->habitat?->nom }} </td>
+                                <td> {{ $animal->description }} </td>
+                                <td>
+                                    <div class="d-flex justify-content-around align-items-center">
+                                        <a href="{{ route('animals.edit', $animal->id) }}"><i class="fa fa-edit text-primary"></i></a>
+                                        <a href="{{ route('animals.destroy', $animal->id) }}"> <i class="fa fa-trash text-danger"></i> </a>
+                                    </div>
                                 </td>
                             </tr>
                         @endforeach

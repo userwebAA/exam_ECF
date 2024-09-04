@@ -5,17 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Habitat extends Model {
+class Animal extends Model {
     use HasFactory;
 
     protected $fillable = [
-        'nom',
-        'image',
-        'description',
-        'commentaires'
+        "nom",
+        "image",
+        "description",
+        "habitat_id"
     ];
 
-    public function animals() {
-        return $this->hasMany(Animal::class);
+    public function habitat() {
+        return $this->belongsTo(Habitat::class);
     }
 }

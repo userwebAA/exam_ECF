@@ -21,7 +21,7 @@
             <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="col-lg-6">
                     <p><span class="text-primary me-2">#</span>Nos Animaux</p>
-                    <h1 class="display-5 mb-0">Nos Giraffe de tanzanie <span class="text-primary">Zoo</span></h1>
+                    <h1 class="display-5 mb-0">Nos <span class="text-primary"> {{ $animal->nom . 's' }} </span></h1>
                 </div>
                 <div class="col-lg-6">
                     <div class="bg-primary h-100 d-flex align-items-center py-4 px-4 px-sm-5">
@@ -35,14 +35,12 @@
             </div>
             <div class="row gy-5 gx-4">
                 <div class="col-lg-6 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <img src="{{ asset('assets/guest/img/1200-521080824-three-giraffe.jpg') }}" id="#" class="w-100" alt="">
-                </div>        
-                    
+                    <img src="{{ asset($animal->image ?? "default_animal.jpg") }}" id="#" class="w-100" alt="">
+                </div>
                     <div class="col-lg-6 col-md-4 col-sm-6 wow fadeInUp " data-wow-delay="0.1s">
-                        <h3 class="text-center">Giraffe de tanzanie</h3>
-                        <p class="text-center">Les girafes de Tanzanie, en particulier la girafe Masaï, sont connues pour leur élégance et leurs taches irrégulières. Elles se déplacent gracieusement dans les savanes du Serengeti et du Tarangire, 
-                            se nourrissant des feuilles des arbres qu'elles atteignent grâce à leur long cou.</p>
-                            <h5 class="pb-1">Leurs specifités secrètes</h5>
+                        <h3> {{ $animal->nom }} </h3>
+                        <p> {{ $animal->description }} </p>
+                            {{-- <h5 class="pb-1">Leurs specifités secrètes</h5>
                             <ul class="animal-1" >
                                 <li class="pb-1">Langue préhensile : Leur langue peut mesurer jusqu'à 50 cm de long , 
                                     ce qui leur permet de saisir et de tirer les feuilles des arbres tout en évitant les épines.</li>
@@ -50,7 +48,7 @@
                                     ce qui leur permet de rester en contact sur de longues distances.</li>
                                 <li>Les girafes ont des excroissances osseuses recouvertes de peau sur leur tête, appelées ossicônes, 
                                     qui sont plus proéminentes chez les mâles et sont utilisées lors des combats.</li>
-                            </ul>
+                            </ul> --}}
         </div>
     </div>
 

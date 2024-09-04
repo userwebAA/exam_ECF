@@ -11,7 +11,6 @@
     <!-- Divider -->
     <hr class="sidebar-divider my-0">
 
-    <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
         <a class="nav-link" href="{{ route('dashboard') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
@@ -45,6 +44,20 @@
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="{{ route('habitats.index') }}">Liste</a>
                 <a class="collapse-item" href="{{ route('habitats.create') }}">Nouveau</a>
+            </div>
+        </div>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#animal"
+            aria-expanded="true" aria-controls="animal">
+            <i class="fas fa-dog"></i>
+            <span>Animal</span>
+        </a>
+        <div id="animal" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="{{ route('animals.index') }}">Liste</a>
+                <a class="collapse-item" href="{{ route('animals.create') }}">Nouveau</a>
             </div>
         </div>
     </li>

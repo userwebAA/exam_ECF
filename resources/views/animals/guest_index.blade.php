@@ -23,7 +23,36 @@
             </div>
         </div>
         <div class="row g-4">
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            @php
+                $snd_counnt = 1;
+            @endphp
+            @forelse ($animals as $animal)
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.{{ $snd_counnt }}s">
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <a class="animal-item" href="{{ route('guest_animals_show', $animal->id) }}">
+                                <div class="position-relative">
+                                    <img class="img-fluid" src="{{ asset($animal->image ?? 'default_animal.jpg') }}" style="width: 420px; height: 270px">
+                                    <div class="animal-text p-4">
+                                        <p class="text-white small text-uppercase mb-0">Animal</p>
+                                        <h5 class="text-white mb-0"> {{ $animal->nom }} </h5>
+                                    </div>
+                                </div>
+                            </a>
+                            <h4> {{ $animal->nom }} </h4>
+                            <p> {!! Str::limit($animal->description, 75, ' ...') !!} </p>
+                        </div>
+                    </div>
+                </div>
+
+                @php
+                    $snd_counnt += 2;
+                @endphp
+            @empty
+                <p> Aucun animal enregistré pour le moment. </p>
+            @endforelse
+
+            {{-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="row g-4">
                     <div class="col-12">
                         <a class="animal-item" href="{{ asset('assets/guest/img/animal-md-1.jpg') }}" data-lightbox="animal">
@@ -100,7 +129,7 @@
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 
