@@ -216,31 +216,59 @@
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
                             <span>Lundi</span>
-                            <span>9:00 - 18:00</span>
+                            @if ($heures[0]->ouverture)
+                                <span> {{ $heures[0]->heure_ouverture . ' - ' . $heures[0]->heure_fermeture }} </span>
+                            @else
+                                <span>Fermé</span>
+                            @endif
                         </li>
                         <li class="list-group-item">
                             <span>Mardi</span>
-                            <span>9:00 - 18:00</span>
+                            @if ($heures[1]->ouverture)
+                                <span> {{ $heures[1]->heure_ouverture . ' - ' . $heures[1]->heure_fermeture }} </span>
+                            @else
+                                <span>Fermé</span>
+                            @endif
                         </li>
                         <li class="list-group-item">
                             <span>Mercredi</span>
-                            <span>9:00 - 18:00</span>
+                            @if ($heures[2]->ouverture)
+                                <span> {{ $heures[2]->heure_ouverture . ' - ' . $heures[2]->heure_fermeture }} </span>
+                            @else
+                                <span>Fermé</span>
+                            @endif
                         </li>
                         <li class="list-group-item">
                             <span>Jeudi</span>
-                            <span>9:00 - 18:00</span>
+                            @if ($heures[3]->ouverture)
+                                <span> {{ $heures[3]->heure_ouverture . ' - ' . $heures[3]->heure_fermeture }} </span>
+                            @else
+                                <span>Fermé</span>
+                            @endif
                         </li>
                         <li class="list-group-item">
                             <span>Vendredi</span>
-                            <span>9:00 - 18:00</span>
+                            @if ($heures[4]->ouverture)
+                                <span> {{ $heures[4]->heure_ouverture . ' - ' . $heures[4]->heure_fermeture }} </span>
+                            @else
+                                <span>Fermé</span>
+                            @endif
                         </li>
                         <li class="list-group-item">
                             <span>Samedi</span>
-                            <span>9:00 - 18:00</span>
+                            @if ($heures[5]->ouverture)
+                                <span> {{ $heures[5]->heure_ouverture . ' - ' . $heures[5]->heure_fermeture }} </span>
+                            @else
+                                <span>Fermé</span>
+                            @endif
                         </li>
                         <li class="list-group-item">
                             <span>Dimanche</span>
-                            <span>Fermé</span>
+                            @if ($heures[6]->ouverture)
+                                <span> {{ $heures[6]->heure_ouverture . ' - ' . $heures[6]->heure_fermeture }} </span>
+                            @else
+                                <span>Fermé</span>
+                            @endif
                         </li>
                     </ul>
                 </div>
