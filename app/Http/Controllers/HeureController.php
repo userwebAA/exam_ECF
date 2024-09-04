@@ -16,17 +16,17 @@ class HeureController extends Controller
         return view('heures.create');
     }
     public function store(Request $request) {
-        $request->validate([
-            'heure' => ['required', 'date_format:HH:MM'], // H:i correspond à l'heure au format 24 heures (00:00 - 23:59)
-            'jour' => ['required', 'date_format:d-m-Y'],
-            'ouverture' => ['required','boolean'],
-        ]);
-
-        $heure = Heure::create([
-            'heure' => $request->heure,
-            'jour' => $request->jour,
-            'ouverture' => $request->ouverture,
-        ]);
+        // $request->validate([
+        //     'heure' => ['required', 'date_format:HH:MM'], // H:i correspond à l'heure au format 24 heures (00:00 - 23:59)
+        //     'ouverture' => ['required','boolean'],
+        // ]);
+        for ($i=1; $i<=7; $i++){
+            Heure::create([
+                'heure' => $request->heure,
+                'jour' => $request->jour,
+                'ouverture' => $request->ouverture,
+            ]);
+        }
 
         return redirect()->route('heures.index')->with('success', 'Heure à etait crée avec succès.');
     }
