@@ -58,7 +58,7 @@ Route::middleware('auth')->group(function () {
     // Route::post('heures/store', [HeureController::class, 'store'])->name('heures.store');
     Route::post('heures', [HeureController::class, 'update'])->name('heures.update');
     Route::get('heures/edit', [HeureController::class, 'edit'])->name('heures.edit');
-    Route::get('heures/{habitat}', [HeureController::class, 'destroy'])->name('heures.delete');
+    Route::get('heures/{habitat}', [HeureController::class, 'destroy'])->name('heures.delete'); 
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
