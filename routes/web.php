@@ -29,6 +29,8 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::post('new_contact_mail', [DefaultController::class, 'new_contact_mail'])->name('new_contact_mail');
+
 Route::middleware('auth')->group(function () {
     Route::get('users', [UtilisateurController::class, 'index'])->name('users.index');
     Route::get('users/create', [UtilisateurController::class, 'create'])->name('users.create');
@@ -47,9 +49,9 @@ Route::middleware('auth')->group(function () {
     Route::get('services/index', [ServiceController::class, 'index'])->name('services.index');
     Route::get('services/create', [ServiceController::class, 'create'])->name('services.create');
     Route::post('services/store', [ServiceController::class, 'store'])->name('services.store');
-    Route::post('services/{habitat}', [ServiceController::class, 'update'])->name('services.update');
-    Route::get('services/{habitat}/edit', [ServiceController::class, 'edit'])->name('services.edit');
-    Route::get('services/{habitat}', [ServiceController::class, 'destroy'])->name('services.delete');
+    Route::post('services/{service}', [ServiceController::class, 'update'])->name('services.update');
+    Route::get('services/{service}/edit', [ServiceController::class, 'edit'])->name('services.edit');
+    Route::get('services/{service}', [ServiceController::class, 'destroy'])->name('services.delete');
 
     Route::resource('animals', AnimalController::class);
 

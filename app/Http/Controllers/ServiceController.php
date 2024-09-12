@@ -22,10 +22,19 @@ class ServiceController extends Controller {
             'description' => ['required','string','max:255']
         ]);
 
-        Service::create([
+        $service = Service::create([
             'nom' => $request->nom,
             'description' => $request->description,
         ]);
+
+        if ($request->file('image')) {
+            $imageName = time().'.'.$request->image->extension();
+            $request->image->move(public_path('images/services'), $imageName);
+
+            $service->update([
+                'image' => 'images/services/' . $imageName,
+            ]);
+        }
 
         return redirect()->route('services.index')->with('success', 'Service créé avec succès');
     }
@@ -40,6 +49,16 @@ class ServiceController extends Controller {
             'nom' => $request->nom,
             'description' => $request->description,
         ]);
+
+
+        if ($request->file('image')) {
+            $imageName = time().'.'.$request->image->extension();
+            $request->image->move(public_path('images/services'), $imageName);
+
+            $service->update([
+                'image' => 'images/services/' . $imageName,
+            ]);
+        }
 
         return redirect()->route('services.index')->with('success', 'Service modifié avec succès');
     }
