@@ -30,7 +30,6 @@
                     @endif
                 </div>
 
-
                 <div class="form-group col-md-3">
                     <label for="my-input">Heure de fermeture</label>
                     <input class="form-control {{ $errors->has('heure') ? 'border-danger' : '' }}" type="time" name="heure_fermeture[]" placeholder="Veuillez entrer l'heure de fermeture" value="{{ old('heure', $heures[$i]?->heure_fermeture) }}">

@@ -17,11 +17,19 @@
             <form action="{{ $service?->id ? route('services.update', $service->id) : route('services.store') }}" method="post" class="row" enctype="multipart/form-data">
                 @csrf
 
-                <div class="form-group col-md-12">
+                <div class="form-group col-md-6">
                     <label for="my-input">Nom</label>
                     <input class="form-control {{ $errors->has('nom') ? 'border-danger' : '' }}" type="text" name="nom" placeholder="Veuillez entrer votre nom complet" value="{{ $service?->nom }}">
                     @if ($errors->has('nom'))
                         <span class="text-danger"> {{ $errors->get('nom')[0] }} </span>
+                    @endif
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label>Image</label>
+                    <input type="file" class="form-control" name="image">
+                    @if ($errors->has('image'))
+                        <span class="text-danger"> {{ $errors->get('image')[0] }} </span>
                     @endif
                 </div>
 

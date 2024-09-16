@@ -16,6 +16,7 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
+                            <th></th>
                             <th class="text-center">Nom</th>
                             <th class="text-center">Description</th>
                             <th class="text-center">Action</th>
@@ -24,6 +25,9 @@
                     <tbody>
                         @foreach ($services as $service)
                             <tr>
+                                <td class="text-center col-1">
+                                    <img src="{{ asset($service->image ) }}" alt="" class="w-100 rounded">
+                                </td>
                                 <td class="text-center"> {{ $service->nom }} </td>
                                 <td class="text-center"> {{ $service->description }} </td>
                                 <td class="py-4 d-flex justify-content-around align-items-center">

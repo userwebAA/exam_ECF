@@ -60,29 +60,31 @@
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                 <p><span class="text-primary me-2">#</span>Contactez-nous</p>
                 <h1 class="display-5 mb-4">Avez-vous une question ? Veuillez nous contacter !</h1>
-                <form>
+                <form action="{{ route('new_contact_mail') }}" method="post">
+                    @csrf
+
                     <div class="row g-3">
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="text" class="form-control bg-light border-0" id="name" placeholder="Votre Nom">
+                                <input type="text" class="form-control bg-light border-0" name="nom" placeholder="Votre Nom">
                                 <label for="name">Votre Nom</label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="email" class="form-control bg-light border-0" id="email" placeholder="Votre Email">
+                                <input type="email" class="form-control bg-light border-0" name="mail" placeholder="Votre Email">
                                 <label for="email">Votre Email</label>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-floating">
-                                <input type="text" class="form-control bg-light border-0" id="subject" placeholder="Sujet">
+                                <input type="text" class="form-control bg-light border-0" name="sujet" placeholder="Sujet">
                                 <label for="subject">Sujet</label>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-floating">
-                                <textarea class="form-control bg-light border-0" placeholder="Laissez un message ici" id="message" style="height: 100px"></textarea>
+                                <textarea class="form-control bg-light border-0" placeholder="Laissez un message ici" name="message" style="height: 100px"></textarea>
                                 <label for="message">Message</label>
                             </div>
                         </div>
