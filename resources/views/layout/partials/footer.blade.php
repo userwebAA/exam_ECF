@@ -24,7 +24,6 @@
                 <a class="btn btn-link" href="">Support</a>
             </div>
             <div class="col-lg-3 col-md-6">
-                <h5 class="text-light mb-4">Newsletter</h5>
                 <p>Recevez les dernières nouvelles et mises à jour.</p>
                 <div class="position-relative mx-auto" style="max-width: 400px;">
                     <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Votre email">

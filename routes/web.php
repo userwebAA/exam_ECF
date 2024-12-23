@@ -53,14 +53,19 @@ Route::middleware('auth')->group(function () {
     Route::get('services/{service}/edit', [ServiceController::class, 'edit'])->name('services.edit');
     Route::get('services/{service}', [ServiceController::class, 'destroy'])->name('services.delete');
 
-    Route::resource('animals', AnimalController::class);
+    Route::resource('animals', AnimalController::class); Route::get('habitats', [HabitatController::class, 'index'])->name('habitats.index');
+    Route::get('animals/create', [AnimalController::class, 'create'])->name('animals.create');
+    Route::post('animals/store', [AnimalController::class, 'store'])->name('animals.store');
+    Route::post('animals/{animal}', [AnimalController::class, 'update'])->name('animals.update');
+    Route::get('animals/{animal}/edit', [AnimalController::class, 'edit'])->name('animals.edit');
+    Route::get('animals/{animal}', [AnimalController::class, 'destroy'])->name('animals.delete');
 
     Route::get('heures/index', [HeureController::class, 'index'])->name('heures.index');
     // Route::get('heures/create', [HeureController::class, 'create'])->name('heures.create');
     // Route::post('heures/store', [HeureController::class, 'store'])->name('heures.store');
     Route::post('heures', [HeureController::class, 'update'])->name('heures.update');
     Route::get('heures/edit', [HeureController::class, 'edit'])->name('heures.edit');
-    Route::get('heures/{habitat}', [HeureController::class, 'destroy'])->name('heures.delete'); 
+    Route::get('heures/{habitat}', [HeureController::class, 'destroy'])->name('heures.delete');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

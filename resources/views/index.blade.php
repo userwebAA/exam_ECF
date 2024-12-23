@@ -4,6 +4,8 @@
 
 
     <!-- Header Start -->
+  
+
         <div class="container-fluid bg-dark p-0 mb-5">
             <div class="col-lg-12  wow fadeIn" data-wow-delay="0.5s">
                 <div class="owl-carousel h-90 header-carousel">
@@ -337,5 +339,7 @@
             </div>
         </div>
     </div>
-
+    @section('scripts')
+    <script src="{{ asset('js/increm.js') }}"></script>
+@endsection
 @endsection
